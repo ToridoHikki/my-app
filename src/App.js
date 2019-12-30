@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import IconSocial from "./components/IconSocial";
 import SubTitle from "./components/SubTittle";
+import SpanText from "./components/SpanText";
+import TopicText from "./components/TopicText/TopicText";
 import "./components/IconSocial/IconSocial.css"
 import {FaFacebook, FaTwitter, FaLinkedinIn} from "react-icons/all";
 import {Col, Container, Row} from "react-bootstrap";
@@ -12,7 +14,7 @@ function App() {
     return (
         <div className="App">
             <header className="">
-               {/* <Container>
+                {/* <Container>
                     <Row className="justify-content-md-center ">
                         <Col>
                             <IconSocial icon={<FaTwitter/>} url={"https://twitter.com/"}/>
@@ -34,13 +36,19 @@ function App() {
                         </ListGroup>
                     </Row>
                 </Container>
-
+                <TopicText text={"INTRODUCE"}/>
                 <Container>
                     <Row>
                         <Col>
                             <SubTitle text={"Welcome To Torido"}/>
                         </Col>
                     </Row>
+                    <Row>
+                        <Col>
+                            <SpanText text={"My name is Huynh Nhu"} helloText={"Hello "}/>
+                        </Col>
+                    </Row>
+
                 </Container>
 
                 <img src={logo} className="App-logo" alt="logo"/>
@@ -52,7 +60,7 @@ function App() {
                     href="https://reactjs.org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >
+                >
                     Learn React
                 </a>
 
