@@ -1,20 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import IconSocial from "./components/IconSocial";
 import SubTitle from "./components/SubTittle";
 import SpanText from "./components/SpanText";
 import TopicText from "./components/TopicText/TopicText";
+import Hr from "./components/hr";
 import "./components/IconSocial/IconSocial.css"
 import {FaFacebook, FaTwitter, FaLinkedinIn} from "react-icons/all";
 import {Col, Container, Row} from "react-bootstrap";
+import {Navbar, Nav} from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 
 function App() {
     return (
         <div className="App">
-            <header className="">
-                {/* <Container>
+                <header className="sticky-top">
+                    <Navbar bg="light" expand="lg">
+                        <Navbar.Brand className="pl-5" href="#home">React-Bootstrap</Navbar.Brand>
+                        <Nav.Item className="float-lg-right">
+                            <ListGroup horizontal>
+                                <IconSocial icon={<FaTwitter/>} url={"https://twitter.com/"}/>
+                                <IconSocial icon={<FaFacebook/>} url={"https://www.facebook.com/"}/>
+                                <IconSocial icon={<FaLinkedinIn/>} url={"https://www.facebook.com/"}/>
+                            </ListGroup>
+                        </Nav.Item>
+                    </Navbar>
+                    {/* <Container>
                     <Row className="justify-content-md-center ">
                         <Col>
                             <IconSocial icon={<FaTwitter/>} url={"https://twitter.com/"}/>
@@ -27,31 +37,30 @@ function App() {
                         </Col>
                     </Row>
                 </Container>*/}
-                <Container>
-                    <Row className="justify-content-end pt-3">
-                        <ListGroup horizontal>
-                            <IconSocial icon={<FaTwitter/>} url={"https://twitter.com/"}/>
-                            <IconSocial icon={<FaFacebook/>} url={"https://www.facebook.com/"}/>
-                            <IconSocial icon={<FaLinkedinIn/>} url={"https://www.facebook.com/"}/>
-                        </ListGroup>
-                    </Row>
-                </Container>
-                <TopicText text={"INTRODUCE"}/>
-                <Container>
-                    <Row>
-                        <Col>
-                            <SubTitle text={"Welcome To Torido"}/>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <SpanText text={"My name is Huynh Nhu"} helloText={"Hello "}/>
-                        </Col>
-                    </Row>
+                </header>
+            <Container>
+                <main>
+                    <Container>
+                        <Row>
+                            <Col sm={1}>
+                            </Col>
+                            <Col md={6}>
+                                <SubTitle text={"Welcome To Torido"}/>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm={1}>
+                                <TopicText text={"INTRODUCE"}/>
+                            </Col>
+                            <Col>
+                                <SpanText text={"My name is Huynh Nhu. "} helloText={"Hello "}/>
+                                <Hr/>
+                            </Col>
+                        </Row>
+                    </Container>
 
-                </Container>
+                    {/*
 
-                <img src={logo} className="App-logo" alt="logo"/>
                 <p>
                     Huynh Nhu <code>src/App.js</code> and save to reload.
                 </p>
@@ -63,8 +72,10 @@ function App() {
                 >
                     Learn React
                 </a>
+*/}
+                </main>
+            </Container>
 
-            </header>
         </div>
     );
 }
