@@ -7,7 +7,7 @@ const SubTitle = ({text}) => {
 };
 
 const subStyle = {
-    fontSize: "15px",
+    fontSize: "20px",
     color: "#2B2B2B",
     position:"auto"
 };

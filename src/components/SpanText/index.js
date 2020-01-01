@@ -10,6 +10,7 @@ const spanTextStyle = {
 };
 const helloTextStyle = {
     color: "#CA0500"
+
 };
 export default SpanText;
 //change SpanText => Header
