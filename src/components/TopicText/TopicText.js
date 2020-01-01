@@ -12,8 +12,8 @@ const topicTextStyle = {
     color: "#2B2B2B",
     transform: "rotate(-90deg)",
     position: "absolute",
-    top: "90%",
-    right:"20%"
+    top: "50%",
+    left: "9%",
 };
 
 export default TopicText;
