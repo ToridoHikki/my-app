@@ -5,11 +5,12 @@
   "dependencies": {
     "bootstrap": "^4.4.0",
     "fullpage-react": "^3.1.0",
+    "rc-progress": "^2.5.2",
     "react": "^16.10.2",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.10.2",
     "react-icons": "^3.8.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
