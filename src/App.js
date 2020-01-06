@@ -4,14 +4,17 @@ import SubTitle from "./components/SubTittle";
 import SpanText from "./components/SpanText";
 import TopicText from "./components/TopicText/TopicText";
 import Hr from "./components/hr";
+import ProjectBox from "./components/ProjectBox";
+import NavDrawer from "./components/NavDrawer";
 import "./components/IconSocial/IconSocial.css"
-import {FaFacebook, FaTwitter, FaLinkedinIn} from "react-icons/all";
-import {Col, Container, Row, Table} from "react-bootstrap";
-import {Navbar, Nav} from "react-bootstrap";
+import {FaFacebook, FaTwitter, FaLinkedinIn, TiThMenu} from "react-icons/all";
+import {Col, Container, Row} from "react-bootstrap";
+import {Navbar, Nav, NavDropdown} from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import {Fullpage, Slide} from 'fullpage-react';
 import inosuke from "./background.jpg";
-import {Line, Circle} from 'rc-progress';
+import {Line} from 'rc-progress';
+
 
 const bodyStyle = {
     position: "relative",
@@ -147,6 +150,16 @@ const verticalSlides = [
                 </Col>
             </Container>
         </div>
+    </Slide>,
+    <Slide style={{backgroundColor: '#5AE271'}}>
+        <div>
+            <TopicText text={"MY WORK"}/>
+            <Container style={bodyStyle}>
+                <div style={Object.assign(contentStyle, {paddingTop: "7em"})}><SpanText
+                    text={"FEARTURED WORK".toUpperCase()}/></div>
+
+            </Container>
+        </div>
     </Slide>
 ];
 fullPageOptions.slides = verticalSlides;
@@ -166,10 +179,12 @@ function App() {
                                     <IconSocial icon={<FaLinkedinIn/>} url={"https://www.facebook.com/"}/>
                                 </ListGroup>
                             </Nav.Item>
+
                         </Container>
                     </Navbar>
                 </header>
             </Fullpage>
+            <NavDrawer name={"Nhu"}></NavDrawer>
         </div>
     );
 }
