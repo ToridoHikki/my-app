@@ -157,7 +157,11 @@ const verticalSlides = [
             <Container style={bodyStyle}>
                 <div style={Object.assign(contentStyle, {paddingTop: "7em"})}><SpanText
                     text={"FEARTURED WORK".toUpperCase()}/></div>
-
+                <div className="col-sm-6 col-md-4 col-lg-3">
+                    <div>
+                        <ProjectBox url={"#"} topic={"Helldsadsadsadsadsaddo"} text={"uynhsdsadsaadasdd"}/>
+                    </div>
+                </div>
             </Container>
         </div>
     </Slide>
@@ -179,12 +183,11 @@ function App() {
                                     <IconSocial icon={<FaLinkedinIn/>} url={"https://www.facebook.com/"}/>
                                 </ListGroup>
                             </Nav.Item>
-
                         </Container>
                     </Navbar>
                 </header>
+                <NavDrawer name={"Nhu"}></NavDrawer>
             </Fullpage>
-            <NavDrawer name={"Nhu"}></NavDrawer>
         </div>
     );
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 const ProjectBox = ({url, topic, text}) => {
     return (
-        <div>
+        <div className="border border-dark" >
             <a href={url}>
-                <div>
+                <div style={projectBoxStyle}>
                     <h5>{topic}</h5>
                     <div>{text}</div>
                 </div>
@@ -12,5 +12,9 @@ const ProjectBox = ({url, topic, text}) => {
         </div>
 );
 };
-
+const projectBoxStyle = {
+    marginTop:"0.5rem",
+    marginBottom:"0.5rem",
+    textAlign:"center",
+};
 export default ProjectBox;
