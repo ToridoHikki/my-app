@@ -37,7 +37,7 @@ class NavDrawer extends React.Component {
                     <div style={drawerStyle}>
                         {this.renderDrawer()}
                         <div onClick={this.handleClick}>
-                            <Icons.TiThMenu style={Object.assign(iconStyle, {margin: "1em"})}/>
+                            <Icons.TiThMenu style={Object.assign(iconStyle, {margin: "1 em"})}/>
                         </div>
                     </div>
                 </div>

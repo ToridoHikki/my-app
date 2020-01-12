@@ -9,12 +9,11 @@ import NavDrawer from "./components/NavDrawer";
 import "./components/IconSocial/IconSocial.css"
 import {FaFacebook, FaTwitter, FaLinkedinIn, TiThMenu} from "react-icons/all";
 import {Col, Container, Row} from "react-bootstrap";
-import {Navbar, Nav, NavDropdown} from "react-bootstrap";
+import {Navbar, Nav, NavDropdown, Button} from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import {Fullpage, Slide} from 'fullpage-react';
 import inosuke from "./background.jpg";
 import {Line} from 'rc-progress';
-
 
 const bodyStyle = {
     position: "relative",
@@ -157,11 +156,29 @@ const verticalSlides = [
             <Container style={bodyStyle}>
                 <div style={Object.assign(contentStyle, {paddingTop: "7em"})}><SpanText
                     text={"FEARTURED WORK".toUpperCase()}/></div>
-                <div className="col-sm-6 col-md-4 col-lg-3">
-                    <div>
-                        <ProjectBox url={"#"} topic={"Helldsadsadsadsadsaddo"} text={"uynhsdsadsaadasdd"}/>
-                    </div>
-                </div>
+                <Row className="mt-5">
+                    <Col>
+                        <div className="border border-dark">
+                            <ProjectBox url={"#"} topic={"Helldsadsadsadsadsaddo"} text={"uynhsdsadsaadasdd"}/>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="border border-dark">
+                            <ProjectBox url={"haha"} topic={"Helsadsadsaddo"} text={"uynhsaadasdd"}/>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="border">
+                            hdaskhdslkdasbdlas
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="border border-box">
+                            hdaskhdslkdasbdlas
+                        </div>
+                    </Col>
+                </Row>
+                {/* <ProjectBox url={"haha"} topic={"Helldsadsadsadsadsaddo"} text={"uynhsdsadsaadasdd"}/>*/}
             </Container>
         </div>
     </Slide>

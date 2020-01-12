@@ -1,20 +1,20 @@
 import React from "react";
+import {Col} from "react-bootstrap";
 
-const ProjectBox = ({url, topic, text}) => {
+const ProjectBox = ({topic, text}) => {
     return (
-        <div className="border border-dark" >
-            <a href={url}>
-                <div style={projectBoxStyle}>
-                    <h5>{topic}</h5>
-                    <div>{text}</div>
-                </div>
-            </a>
-        </div>
+            <div style={projectBoxStyle}>
+                <h5>{topic}</h5>
+                <div>{text}</div>
+            </div>
+
 );
 };
 const projectBoxStyle = {
-    marginTop:"0.5rem",
-    marginBottom:"0.5rem",
     textAlign:"center",
+    marginLeft:"0.5rem",
+    marginRight:"0.5rem",
+    marginTop:"0.5rem",
+    marginBottom:"4rem",
 };
 export default ProjectBox;
