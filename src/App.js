@@ -7,13 +7,14 @@ import Hr from "./components/hr";
 import ProjectBox from "./components/ProjectBox";
 import NavDrawer from "./components/NavDrawer";
 import "./components/IconSocial/IconSocial.css"
-import {FaFacebook, FaTwitter, FaLinkedinIn, TiThMenu} from "react-icons/all";
-import {Col, Container, Row} from "react-bootstrap";
+import {FaFacebook, FaTwitter, FaLinkedinIn, TiThMenu, FaChevronRight, FiChevronRight} from "react-icons/all";
+import {Col, Container, Image, Row} from "react-bootstrap";
 import {Navbar, Nav, NavDropdown, Button} from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import {Fullpage, Slide} from 'fullpage-react';
 import inosuke from "./background.jpg";
 import {Line} from 'rc-progress';
+import {MDBContainer} from 'mdbreact';
 
 const bodyStyle = {
     position: "relative",
@@ -64,6 +65,67 @@ const progressTitle = {
 };
 
 const verticalSlides = [
+    <Slide style={{backgroundColor: "#999999"}}>
+        <TopicText text={"SERVICES"}/>
+        <Container style={bodyStyle}>
+            <Row>
+                <Col>
+                    <div style={Object.assign(contentStyle, {paddingTop: "7em"})}><SpanText
+                        text={"EASY AND FUN".toUpperCase()} helloText={"I LIKE TO MAKE THINGS ".toUpperCase()}/></div>
+                </Col>
+                <Col className="align-middle">
+                    <img src={require("./quynhaka.jpg")} width="500vh" height="500vh"/>
+                </Col>
+            </Row>
+
+        </Container>
+
+    </Slide>,
+    <Slide style={{backgroundColor: '#5AE271'}}>
+        <div>
+            <TopicText text={"MY WORK"}/>
+            <Container style={bodyStyle}>
+                <div style={Object.assign(contentStyle, {paddingTop: "7em"})}><SpanText
+                    text={"FEARTURED WORK".toUpperCase()}/></div>
+                <Row className="mt-5">
+                    <Col>
+                        <div className="border border-dark">
+                            <ProjectBox url={"#"} topic={"Helldsad sadsa asdsadas dasdsaddo"}
+                                        text={"uynhssads aadasdd"}/>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="border border-dark">
+                            <ProjectBox url={"haha"} topic={"Helsadsadsaddo"} text={"uynh saadasdd"}/>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="border border-dark">
+                            <ProjectBox url={"haha"} topic={"Helsadsadsadsd sadsaddo"}
+                                        text={"uynhsadasdsad asdsdasadasdd"}/>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="border border-dark">
+                            <ProjectBox url={"haha"} topic={"Helsadsadsadsd sadsaddo"}
+                                        text={"uynhsadasdsad asdsdasadasdd"}/>
+                        </div>
+                    </Col>
+                </Row>
+                <Row className="mt-4">
+                    <Col xs={3}>
+                        <div className="border border-dark">
+                            <ProjectBox url={"#"} topic={"Helldsad sadsa asdsadas dasdsaddo"}
+                                        text={"uynhssads aadasdd"}/>
+                        </div>
+                    </Col>
+                </Row>
+
+                <h5 className="float-right mt-3">View All Project <FiChevronRight className="mb-1 h3"/></h5>
+                {/* <ProjectBox url={"haha"} topic={"Helldsadsadsadsadsaddo"} text={"uynhsdsadsaadasdd"}/>*/}
+            </Container>
+        </div>
+    </Slide>,
     <Slide style={bgImage}>
         <div>
             <TopicText text={"INTRODUCE"}/>
@@ -150,38 +212,6 @@ const verticalSlides = [
             </Container>
         </div>
     </Slide>,
-    <Slide style={{backgroundColor: '#5AE271'}}>
-        <div>
-            <TopicText text={"MY WORK"}/>
-            <Container style={bodyStyle}>
-                <div style={Object.assign(contentStyle, {paddingTop: "7em"})}><SpanText
-                    text={"FEARTURED WORK".toUpperCase()}/></div>
-                <Row className="mt-5">
-                    <Col>
-                        <div className="border border-dark">
-                            <ProjectBox url={"#"} topic={"Helldsadsadsadsadsaddo"} text={"uynhsdsadsaadasdd"}/>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div className="border border-dark">
-                            <ProjectBox url={"haha"} topic={"Helsadsadsaddo"} text={"uynhsaadasdd"}/>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div className="border">
-                            hdaskhdslkdasbdlas
-                        </div>
-                    </Col>
-                    <Col>
-                        <div className="border border-box">
-                            hdaskhdslkdasbdlas
-                        </div>
-                    </Col>
-                </Row>
-                {/* <ProjectBox url={"haha"} topic={"Helldsadsadsadsadsaddo"} text={"uynhsdsadsaadasdd"}/>*/}
-            </Container>
-        </div>
-    </Slide>
 ];
 fullPageOptions.slides = verticalSlides;
 

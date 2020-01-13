@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.4.0",
     "fullpage-react": "^3.1.0",
+    "mdbreact": "^4.24.0",
     "rc-drawer": "^3.1.1",
     "rc-progress": "^2.5.2",
     "react": "^16.10.2",

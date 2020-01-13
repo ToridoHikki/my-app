@@ -1,20 +1,43 @@
 import React from "react";
 import {Col} from "react-bootstrap";
+import {MDBContainer} from 'mdbreact';
 
-const ProjectBox = ({topic, text}) => {
-    return (
-            <div style={projectBoxStyle}>
-                <h5>{topic}</h5>
-                <div>{text}</div>
-            </div>
+class ProjectBox extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isHover: false,
+        }
+    }
 
-);
+    toggleHover = () => {
+        const {isHover} = this.state;
+        this.setState({
+            isHover: !isHover,
+        });
+        console.log(isHover);
+    };
+
+    render() {
+        const {topic, text} = this.props;
+        return (
+            <MDBContainer onMouseEnter={this.toggleHover}
+                          onMouseLeave={this.toggleHover}
+                          style={this.state.isHover ? afterHover : {}}
+                          className="d-md-flex">
+                <div className="text-wrap" style={projectBoxStyle}>
+                    <h5>{topic}</h5>
+                    <div>{text}</div>
+                </div>
+            </MDBContainer>
+        );
+    }
 };
 const projectBoxStyle = {
-    textAlign:"center",
-    marginLeft:"0.5rem",
-    marginRight:"0.5rem",
-    marginTop:"0.5rem",
-    marginBottom:"4rem",
+    width: "180px",
+    height: "180px",
+};
+const afterHover = {
+    backgroundColor: "yellow",
 };
 export default ProjectBox;
